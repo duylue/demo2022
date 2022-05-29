@@ -7,7 +7,6 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface AcamedyRepo extends JpaRepository<Cache, String    > {
-    @Procedure("Cache.getCache")
-    List<Cache> getCache ();
+public interface AcamedyRepo extends JpaRepository<Cache, Long > {
+
 }

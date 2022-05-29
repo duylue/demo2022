@@ -14,6 +14,6 @@ public class CacheServiceImpl implements CacheService {
     AcamedyRepo acamedyRepo;
     @Override
     public ArrayList<Cache> get() {
-        return (ArrayList<Cache>) acamedyRepo.getCache();
+        return (ArrayList<Cache>) acamedyRepo.findAll();
     }
 }

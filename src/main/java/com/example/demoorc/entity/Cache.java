@@ -9,14 +9,13 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@Table(name = "LENDBIZ")
 @ToString
-@NamedStoredProcedureQueries({ //
-        @NamedStoredProcedureQuery(name = "Cache.getCache", resultClasses = Cache.class, procedureName = "DUY1", parameters = { //
-                @StoredProcedureParameter(name = "cs", mode = ParameterMode.REF_CURSOR, type = Void.class)}
-             ) //
-})
+
 public class Cache {
     @Id
     @Column(name = "ID")
-    private String ID;
+    private Long ID;
+    @Column(name = "NAME")
+    private String name;
 }
